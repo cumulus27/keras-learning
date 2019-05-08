@@ -42,7 +42,7 @@ class DogCat(object):
 
     def load_data(self):
 
-        original_dataset_dir = self.data_path + '/kaggle_original_data/train'  # ←------ 原始数据集解压目录的路径
+        original_dataset_dir = self.data_path + '/train'  # ←------ 原始数据集解压目录的路径
 
         base_dir = self.data_path + '/cats_and_dogs_small'  # ←------ 保存较小数据集的目录
 
@@ -256,11 +256,11 @@ class DogCat(object):
 
 
 if __name__ == "__main__":
-    path = "/home/zte/code/data"
+    path = "/home/py/data/dogs-vs-cats"
 
     cnn = DogCat(path)
+    cnn.load_data()
     cnn.get_data_path()
-    # cnn.load_data()
 
     # cnn.generate_simple_model()
     # cnn.generate_model_with_dropout()
